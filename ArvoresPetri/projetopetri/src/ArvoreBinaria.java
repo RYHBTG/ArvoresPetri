@@ -16,6 +16,9 @@ public class ArvoreBinaria {
             No pai = null;
             boolean esquerda = false;
             while(atual != null) {
+                if (novoNo.getValor() == atual.getValor()){
+                    return;
+                }
                 if(novoNo.getValor() < atual.getValor()) {
                     pai = atual;
                     atual = atual.getEsq();
